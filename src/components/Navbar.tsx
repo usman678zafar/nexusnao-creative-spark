@@ -53,7 +53,7 @@ export const Navbar = () => {
             <a
               key={item.name}
               href={item.href}
-              className="text-nexus-darkGray hover:text-nexus-blue font-medium transition-all duration-300"
+              className="text-nexus-darkGray hover:text-[#3B82F6] font-medium transition-all duration-300"
             >
               {item.name}
             </a>
@@ -62,7 +62,7 @@ export const Navbar = () => {
         
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-nexus-darkGray hover:text-nexus-blue transition-colors"
+          className="md:hidden text-nexus-darkGray hover:text-[#3B82F6] transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
         >
@@ -82,7 +82,7 @@ export const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-nexus-darkGray hover:text-nexus-blue font-medium text-lg py-2 transition-all duration-300"
+                className="text-nexus-darkGray hover:text-[#3B82F6] font-medium text-lg py-2 transition-all duration-300"
                 style={{ animationDelay: `${i * 50}ms` }}
                 onClick={() => setMobileMenuOpen(false)}
               >
