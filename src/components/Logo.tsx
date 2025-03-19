@@ -146,27 +146,27 @@ export const Logo = ({
             )}
           />
           
-          {/* Gradients - 3 distinct colors */}
+          {/* Gradients - 3 distinct colors: red, blue, black */}
           <defs>
             <linearGradient id="logoGradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#0EA5E9" />
-              <stop offset="1" stopColor="#0C4A6E" />
+              <stop stopColor="#1E40AF" />
+              <stop offset="1" stopColor="#0A2463" />
             </linearGradient>
             <linearGradient id="logoGradient2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#7E22CE" />
-              <stop offset="1" stopColor="#4338CA" />
+              <stop stopColor="#EA384C" />
+              <stop offset="1" stopColor="#C81D35" />
             </linearGradient>
             <linearGradient id="logoGradientFill" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#0EA5E9" />
-              <stop offset="1" stopColor="#0C4A6E" />
+              <stop stopColor="#1E40AF" />
+              <stop offset="1" stopColor="#0A2463" />
             </linearGradient>
             <linearGradient id="logoGradientFill2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#7E22CE" />
-              <stop offset="1" stopColor="#4338CA" />
+              <stop stopColor="#EA384C" />
+              <stop offset="1" stopColor="#C81D35" />
             </linearGradient>
             <linearGradient id="logoGradientFill3" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#F59E0B" />
-              <stop offset="1" stopColor="#D97706" />
+              <stop stopColor="#000000" />
+              <stop offset="1" stopColor="#222222" />
             </linearGradient>
           </defs>
         </svg>
@@ -181,7 +181,7 @@ export const Logo = ({
           <span className="text-nexus-blue">Nexus</span>
           <span className={cn(
             'transition-all duration-300',
-            isHovered ? 'text-[#7E22CE]' : 'text-nexus-black'
+            isHovered ? 'text-[#EA384C]' : 'text-nexus-black'
           )}>Nao</span>
         </span>
       )}

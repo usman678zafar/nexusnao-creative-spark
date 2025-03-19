@@ -8,24 +8,24 @@
   </g>
   <defs>
     <linearGradient id="paint0_linear" x1="672.5" y1="239.5" x2="672.5" y2="668.5" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#3B82F6"/>
-      <stop offset="0.5" stop-color="#8B5CF6"/>
-      <stop offset="1" stop-color="#F59E0B"/>
+      <stop stop-color="#1E40AF"/>
+      <stop offset="0.5" stop-color="#EA384C"/>
+      <stop offset="1" stop-color="#000000"/>
     </linearGradient>
     <linearGradient id="paint1_linear" x1="672.5" y1="340.5" x2="672.5" y2="769.5" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#3B82F6"/>
-      <stop offset="0.5" stop-color="#8B5CF6"/>
-      <stop offset="1" stop-color="#F59E0B"/>
+      <stop stop-color="#1E40AF"/>
+      <stop offset="0.5" stop-color="#EA384C"/>
+      <stop offset="1" stop-color="#000000"/>
     </linearGradient>
     <linearGradient id="paint2_linear" x1="672.5" y1="-49.5" x2="672.5" y2="379.5" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#3B82F6"/>
-      <stop offset="0.5" stop-color="#8B5CF6"/>
-      <stop offset="1" stop-color="#F59E0B"/>
+      <stop stop-color="#1E40AF"/>
+      <stop offset="0.5" stop-color="#EA384C"/>
+      <stop offset="1" stop-color="#000000"/>
     </linearGradient>
     <linearGradient id="paint3_linear" x1="672.5" y1="42.5" x2="672.5" y2="471.5" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#3B82F6"/>
-      <stop offset="0.5" stop-color="#8B5CF6"/>
-      <stop offset="1" stop-color="#F59E0B"/>
+      <stop stop-color="#1E40AF"/>
+      <stop offset="0.5" stop-color="#EA384C"/>
+      <stop offset="1" stop-color="#000000"/>
     </linearGradient>
   </defs>
 </svg>

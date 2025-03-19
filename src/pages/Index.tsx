@@ -12,13 +12,13 @@ const FounderCard = ({ name, role, image, description }: {
 }) => (
   <div className="bg-white/70 backdrop-blur-sm rounded-xl shadow-sm border border-gray-100 p-6 transition-all duration-300 hover:shadow-md hover:translate-y-[-2px]">
     <div className="flex flex-col items-center">
-      <div className="h-24 w-24 rounded-full bg-gradient-to-r from-[#3B82F6] via-[#8B5CF6] to-[#F59E0B] p-1 mb-4">
+      <div className="h-24 w-24 rounded-full bg-gradient-to-r from-[#1E40AF] via-[#EA384C] to-[#000000] p-1 mb-4">
         <div className="h-full w-full rounded-full bg-white flex items-center justify-center overflow-hidden">
           <User size={40} className="text-nexus-darkGray" />
         </div>
       </div>
       <h3 className="text-xl font-semibold mb-2">{name}</h3>
-      <p className="text-[#8B5CF6] font-medium mb-4">{role}</p>
+      <p className="text-[#EA384C] font-medium mb-4">{role}</p>
       <p className="text-nexus-darkGray text-center">{description}</p>
     </div>
   </div>
@@ -30,8 +30,8 @@ const FeatureCard = ({ icon: Icon, title, description }: {
   description: string; 
 }) => (
   <div className="bg-white/70 backdrop-blur-sm rounded-xl shadow-sm border border-gray-100 p-6 transition-all duration-300 hover:shadow-md hover:translate-y-[-2px]">
-    <div className="h-12 w-12 rounded-xl bg-[#3B82F6]/10 flex items-center justify-center mb-4">
-      <Icon size={24} className="text-[#3B82F6]" />
+    <div className="h-12 w-12 rounded-xl bg-[#1E40AF]/10 flex items-center justify-center mb-4">
+      <Icon size={24} className="text-[#1E40AF]" />
     </div>
     <h3 className="text-lg font-semibold mb-2">{title}</h3>
     <p className="text-nexus-darkGray">{description}</p>
@@ -158,7 +158,7 @@ const Index = () => {
             <h2 className="text-2xl md:text-3xl font-display font-medium text-center mb-12">Contact Us</h2>
             <div className="max-w-2xl mx-auto bg-white/70 backdrop-blur-sm rounded-xl shadow-sm border border-gray-100 p-8">
               <div className="flex flex-col items-center justify-center text-center mb-8">
-                <Mail className="text-[#3B82F6] h-12 w-12 mb-4" />
+                <Mail className="text-[#1E40AF] h-12 w-12 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Get in Touch</h3>
                 <p className="text-nexus-darkGray">Have a project in mind? Let's discuss how we can help your business grow.</p>
               </div>
@@ -166,22 +166,22 @@ const Index = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-nexus-darkGray mb-1">Name</label>
-                    <input type="text" id="name" className="w-full px-4 py-2 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#3B82F6]" />
+                    <input type="text" id="name" className="w-full px-4 py-2 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#1E40AF]" />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-nexus-darkGray mb-1">Email</label>
-                    <input type="email" id="email" className="w-full px-4 py-2 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#3B82F6]" />
+                    <input type="email" id="email" className="w-full px-4 py-2 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#1E40AF]" />
                   </div>
                 </div>
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-nexus-darkGray mb-1">Subject</label>
-                  <input type="text" id="subject" className="w-full px-4 py-2 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#3B82F6]" />
+                  <input type="text" id="subject" className="w-full px-4 py-2 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#1E40AF]" />
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-nexus-darkGray mb-1">Message</label>
-                  <textarea id="message" rows={4} className="w-full px-4 py-2 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#3B82F6]"></textarea>
+                  <textarea id="message" rows={4} className="w-full px-4 py-2 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#1E40AF]"></textarea>
                 </div>
-                <button type="submit" className="w-full bg-gradient-to-r from-[#3B82F6] via-[#8B5CF6] to-[#F59E0B] text-white py-3 rounded-md font-medium hover:opacity-90 transition-opacity">Send Message</button>
+                <button type="submit" className="w-full bg-gradient-to-r from-[#1E40AF] via-[#EA384C] to-[#000000] text-white py-3 rounded-md font-medium hover:opacity-90 transition-opacity">Send Message</button>
               </form>
             </div>
           </div>
@@ -195,9 +195,9 @@ const Index = () => {
               <p className="text-nexus-darkGray mt-2">Software & E-commerce Solutions</p>
             </div>
             <div className="flex gap-8">
-              <a href="#services" className="text-nexus-darkGray hover:text-[#3B82F6] transition-colors">Services</a>
-              <a href="#about" className="text-nexus-darkGray hover:text-[#3B82F6] transition-colors">About</a>
-              <a href="#contact" className="text-nexus-darkGray hover:text-[#3B82F6] transition-colors">Contact</a>
+              <a href="#services" className="text-nexus-darkGray hover:text-[#1E40AF] transition-colors">Services</a>
+              <a href="#about" className="text-nexus-darkGray hover:text-[#1E40AF] transition-colors">About</a>
+              <a href="#contact" className="text-nexus-darkGray hover:text-[#1E40AF] transition-colors">Contact</a>
             </div>
           </div>
           <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-gray-100 text-center text-nexus-darkGray text-sm">

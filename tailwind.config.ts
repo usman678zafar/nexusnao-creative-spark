@@ -54,12 +54,14 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				nexus: {
-					blue: '#0EA5E9',
-					darkBlue: '#0C4A6E',
+					blue: '#1E40AF',
+					darkBlue: '#0A2463',
 					lightBlue: '#BAE6FD',
+					red: '#EA384C',
+					darkRed: '#C81D35',
 					gray: '#F1F5F9',
 					darkGray: '#334155',
-					black: '#0F172A'
+					black: '#000000'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
