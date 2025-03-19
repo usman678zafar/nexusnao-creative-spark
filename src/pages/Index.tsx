@@ -2,38 +2,27 @@
 import { useEffect, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import Logo from '@/components/Logo';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Globe, Layers, LayoutGrid, Server, ShoppingCart } from 'lucide-react';
+import { ArrowRight, Code, Globe, Layers, LayoutGrid, Mail, Server, ShoppingCart, User } from 'lucide-react';
 
-const LogoShowcase = () => {
-  return (
-    <div className="flex flex-col items-center justify-center gap-8 my-20">
-      <h2 className="text-2xl md:text-3xl font-display font-medium text-center">Our Logo</h2>
-      
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 p-8 bg-white/50 backdrop-blur-sm rounded-2xl shadow-sm">
-        <div className="flex flex-col items-center gap-3">
-          <Logo size="lg" withText={false} />
-          <span className="text-sm text-nexus-darkGray">Icon Only</span>
-        </div>
-        
-        <div className="flex flex-col items-center gap-3">
-          <Logo size="lg" variant="simple" withText={false} />
-          <span className="text-sm text-nexus-darkGray">Simple Icon</span>
-        </div>
-        
-        <div className="flex flex-col items-center gap-3">
-          <Logo size="lg" />
-          <span className="text-sm text-nexus-darkGray">Full Logo</span>
-        </div>
-        
-        <div className="flex flex-col items-center gap-3 bg-nexus-darkBlue p-4 rounded-xl">
-          <Logo size="lg" className="text-white" />
-          <span className="text-sm text-white">Inverted</span>
+const FounderCard = ({ name, role, image, description }: { 
+  name: string; 
+  role: string;
+  image: string;
+  description: string; 
+}) => (
+  <div className="bg-white/70 backdrop-blur-sm rounded-xl shadow-sm border border-gray-100 p-6 transition-all duration-300 hover:shadow-md hover:translate-y-[-2px]">
+    <div className="flex flex-col items-center">
+      <div className="h-24 w-24 rounded-full bg-gradient-to-r from-nexus-blue via-[#7E22CE] to-[#F59E0B] p-1 mb-4">
+        <div className="h-full w-full rounded-full bg-white flex items-center justify-center overflow-hidden">
+          <User size={40} className="text-nexus-darkGray" />
         </div>
       </div>
+      <h3 className="text-xl font-semibold mb-2">{name}</h3>
+      <p className="text-[#7E22CE] font-medium mb-4">{role}</p>
+      <p className="text-nexus-darkGray text-center">{description}</p>
     </div>
-  );
-};
+  </div>
+);
 
 const FeatureCard = ({ icon: Icon, title, description }: { 
   icon: React.ElementType; 
@@ -68,7 +57,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-nexus-gray to-white">
+    <div className="min-h-screen bg-[url('/bg-pattern.svg')] bg-fixed bg-no-repeat bg-cover">
       <Navbar />
       
       {/* Hero Section */}
@@ -82,29 +71,33 @@ const Index = () => {
             <p className="text-lg md:text-xl text-nexus-darkGray max-w-2xl mb-10">
               Connecting your business to the digital world with seamless software services and e-commerce solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                to="/services" 
-                className="px-6 py-3 bg-nexus-blue text-white rounded-full font-medium hover:bg-nexus-darkBlue transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Explore Services <ArrowRight size={16} />
-              </Link>
-              <Link 
-                to="/contact" 
-                className="px-6 py-3 bg-white text-nexus-darkGray border border-gray-200 rounded-full font-medium hover:bg-gray-50 transition-all duration-300"
-              >
-                Contact Us
-              </Link>
-            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Founders Section */}
+      <section className="py-20 px-6" id="about">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-display font-medium text-center mb-12">Our Leadership</h2>
+          <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+            <FounderCard 
+              name="Muhammad Usman" 
+              role="Founder" 
+              image="/founder.jpg"
+              description="Visionary tech entrepreneur with expertise in software development and e-commerce solutions. Leading NexusNao to create innovative digital experiences for businesses worldwide."
+            />
+            <FounderCard 
+              name="Muhammad Noman" 
+              role="Co-Founder" 
+              image="/co-founder.jpg"
+              description="Strategic business leader with a passion for digital transformation. Driving NexusNao's mission to connect businesses with cutting-edge technology solutions."
+            />
           </div>
         </div>
       </section>
 
-      {/* Logo Showcase */}
-      <LogoShowcase />
-      
       {/* Features Section */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6" id="services">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-display font-medium text-center mb-12">Our Services</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -142,17 +135,52 @@ const Index = () => {
         </div>
       </section>
       
+      {/* Contact Section */}
+      <section className="py-16 px-6" id="contact">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-display font-medium text-center mb-12">Contact Us</h2>
+          <div className="max-w-2xl mx-auto bg-white/70 backdrop-blur-sm rounded-xl shadow-sm border border-gray-100 p-8">
+            <div className="flex flex-col items-center justify-center text-center mb-8">
+              <Mail className="text-nexus-blue h-12 w-12 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Get in Touch</h3>
+              <p className="text-nexus-darkGray">Have a project in mind? Let's discuss how we can help your business grow.</p>
+            </div>
+            <form className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-nexus-darkGray mb-1">Name</label>
+                  <input type="text" id="name" className="w-full px-4 py-2 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-nexus-blue" />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-nexus-darkGray mb-1">Email</label>
+                  <input type="email" id="email" className="w-full px-4 py-2 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-nexus-blue" />
+                </div>
+              </div>
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-nexus-darkGray mb-1">Subject</label>
+                <input type="text" id="subject" className="w-full px-4 py-2 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-nexus-blue" />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-nexus-darkGray mb-1">Message</label>
+                <textarea id="message" rows={4} className="w-full px-4 py-2 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-nexus-blue"></textarea>
+              </div>
+              <button type="submit" className="w-full bg-gradient-to-r from-nexus-blue via-[#7E22CE] to-[#F59E0B] text-white py-3 rounded-md font-medium hover:opacity-90 transition-opacity">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      
       {/* Footer */}
-      <footer className="bg-white py-12 px-6 border-t border-gray-100">
+      <footer className="bg-white/80 backdrop-blur-sm py-12 px-6 border-t border-gray-100">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <Logo size="md" />
             <p className="text-nexus-darkGray mt-2">Software & E-commerce Solutions</p>
           </div>
           <div className="flex gap-8">
-            <Link to="/services" className="text-nexus-darkGray hover:text-nexus-blue transition-colors">Services</Link>
-            <Link to="/about" className="text-nexus-darkGray hover:text-nexus-blue transition-colors">About</Link>
-            <Link to="/contact" className="text-nexus-darkGray hover:text-nexus-blue transition-colors">Contact</Link>
+            <a href="#services" className="text-nexus-darkGray hover:text-nexus-blue transition-colors">Services</a>
+            <a href="#about" className="text-nexus-darkGray hover:text-nexus-blue transition-colors">About</a>
+            <a href="#contact" className="text-nexus-darkGray hover:text-nexus-blue transition-colors">Contact</a>
           </div>
         </div>
         <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-gray-100 text-center text-nexus-darkGray text-sm">

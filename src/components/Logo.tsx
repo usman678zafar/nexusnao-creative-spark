@@ -79,7 +79,7 @@ export const Logo = ({
           {/* Inner Node Connection Lines */}
           <path
             d="M20 10L20 30M10 20L30 20"
-            stroke="url(#logoGradient)"
+            stroke="url(#logoGradient2)"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -99,7 +99,7 @@ export const Logo = ({
             cx="20"
             cy="20"
             r="4"
-            fill="url(#logoGradientFill)"
+            fill="url(#logoGradientFill3)"
             className={cn(
               'origin-center transition-all duration-300',
               isHovered ? 'opacity-100 scale-110' : 'opacity-90 scale-100'
@@ -129,7 +129,7 @@ export const Logo = ({
             cx="10"
             cy="20"
             r="2"
-            fill="url(#logoGradientFill)"
+            fill="url(#logoGradientFill2)"
             className={cn(
               'origin-center transition-all duration-300',
               isHovered ? 'opacity-100 scale-110' : 'opacity-80 scale-100'
@@ -139,22 +139,34 @@ export const Logo = ({
             cx="30"
             cy="20"
             r="2"
-            fill="url(#logoGradientFill)"
+            fill="url(#logoGradientFill2)"
             className={cn(
               'origin-center transition-all duration-300',
               isHovered ? 'opacity-100 scale-110' : 'opacity-80 scale-100'
             )}
           />
           
-          {/* Gradients */}
+          {/* Gradients - 3 distinct colors */}
           <defs>
             <linearGradient id="logoGradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
               <stop stopColor="#0EA5E9" />
               <stop offset="1" stopColor="#0C4A6E" />
             </linearGradient>
+            <linearGradient id="logoGradient2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#7E22CE" />
+              <stop offset="1" stopColor="#4338CA" />
+            </linearGradient>
             <linearGradient id="logoGradientFill" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
               <stop stopColor="#0EA5E9" />
               <stop offset="1" stopColor="#0C4A6E" />
+            </linearGradient>
+            <linearGradient id="logoGradientFill2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#7E22CE" />
+              <stop offset="1" stopColor="#4338CA" />
+            </linearGradient>
+            <linearGradient id="logoGradientFill3" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#F59E0B" />
+              <stop offset="1" stopColor="#D97706" />
             </linearGradient>
           </defs>
         </svg>
@@ -169,7 +181,7 @@ export const Logo = ({
           <span className="text-nexus-blue">Nexus</span>
           <span className={cn(
             'transition-all duration-300',
-            isHovered ? 'text-nexus-darkBlue' : 'text-nexus-black'
+            isHovered ? 'text-[#7E22CE]' : 'text-nexus-black'
           )}>Nao</span>
         </span>
       )}
