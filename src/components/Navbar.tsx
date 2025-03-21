@@ -1,9 +1,8 @@
-
-import { useState, useEffect } from 'react';
-import { cn } from '@/lib/utils';
-import Logo from './Logo';
-import { Menu, X } from 'lucide-react';
-import { useIsMobile } from '@/hooks/use-mobile';
+import { useState, useEffect } from "react";
+import { cn } from "@/lib/utils";
+import Logo from "./Logo";
+import { Menu, X } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -18,8 +17,8 @@ export const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [scrolled]);
 
   // Close mobile menu when changing from mobile to desktop
@@ -30,23 +29,23 @@ export const Navbar = () => {
   }, [isMobile]);
 
   const navItems = [
-    { name: 'Services', href: '#services' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: "Services", href: "#services" },
+    { name: "About", href: "#about" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 px-6 transition-all duration-300',
-        scrolled 
-          ? 'py-3 bg-white/90 backdrop-blur-md shadow-sm' 
-          : 'py-5 bg-transparent'
+        "fixed top-0 left-0 right-0 z-50 px-6 transition-all duration-300",
+        scrolled
+          ? "py-3 bg-white/90 backdrop-blur-md shadow-sm"
+          : "py-5 bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Logo size={scrolled ? 'sm' : 'md'} />
-        
+        <Logo size={scrolled ? "sm" : "md"} />
+
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
           {navItems.map((item) => (
@@ -59,12 +58,12 @@ export const Navbar = () => {
             </a>
           ))}
         </nav>
-        
+
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-nexus-darkGray hover:text-[#1E40AF] transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
           {mobileMenuOpen ? (
             <X size={24} className="animate-fade-in" />
@@ -73,7 +72,7 @@ export const Navbar = () => {
           )}
         </button>
       </div>
-      
+
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-md animate-slide-up">
