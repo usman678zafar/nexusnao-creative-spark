@@ -1,50 +1,49 @@
-
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { cn } from '@/lib/utils';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { cn } from "@/lib/utils";
 
 interface LogoProps {
   className?: string;
-  size?: 'sm' | 'md' | 'lg';
-  variant?: 'default' | 'simple';
+  size?: "sm" | "md" | "lg";
+  variant?: "default" | "simple";
   withText?: boolean;
 }
 
 export const Logo = ({
   className,
-  size = 'md',
-  variant = 'default',
+  size = "md",
+  variant = "default",
   withText = true,
 }: LogoProps) => {
   const [isHovered, setIsHovered] = useState(false);
-  
+
   const sizeClasses = {
-    sm: 'h-6 w-6',
-    md: 'h-8 w-8',
-    lg: 'h-10 w-10',
+    sm: "h-6 w-6",
+    md: "h-8 w-8",
+    lg: "h-10 w-10",
   };
-  
+
   const textSizeClasses = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg',
+    sm: "text-sm",
+    md: "text-base",
+    lg: "text-lg",
   };
 
   return (
     <Link
       to="/"
       className={cn(
-        'flex items-center gap-2 transition-all duration-300',
+        "flex items-center gap-2 transition-all duration-300",
         className
       )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div 
+      <div
         className={cn(
-          'relative flex items-center justify-center transition-all duration-300',
+          "relative flex items-center justify-center transition-all duration-300",
           sizeClasses[size],
-          isHovered ? 'scale-105' : 'scale-100'
+          isHovered ? "scale-105" : "scale-100"
         )}
       >
         {/* Logo SVG */}
@@ -53,8 +52,8 @@ export const Logo = ({
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className={cn(
-            'w-full h-full transition-all duration-500',
-            isHovered ? 'rotate-[360deg]' : 'rotate-0'
+            "w-full h-full transition-all duration-500",
+            isHovered ? "rotate-[360deg]" : "rotate-0"
           )}
         >
           {/* Main Circle */}
@@ -64,18 +63,15 @@ export const Logo = ({
             r="18"
             stroke="url(#logoGradient)"
             strokeWidth="2"
-            className={cn(
-              'origin-center',
-              {
-                'animate-path-draw': variant === 'default',
-              }
-            )}
+            className={cn("origin-center", {
+              "animate-path-draw": variant === "default",
+            })}
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeDasharray="100"
-            strokeDashoffset={variant === 'simple' ? "0" : "100"}
+            strokeDashoffset={variant === "simple" ? "0" : "100"}
           />
-          
+
           {/* Inner Node Connection Lines */}
           <path
             d="M20 10L20 30M10 20L30 20"
@@ -84,13 +80,13 @@ export const Logo = ({
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeDasharray="100"
-            strokeDashoffset={variant === 'simple' ? "0" : "100"}
+            strokeDashoffset={variant === "simple" ? "0" : "100"}
             className={cn(
-              'origin-center transition-all duration-500',
+              "origin-center transition-all duration-500",
               {
-                'animate-path-draw animation-delay-300': variant === 'default',
+                "animate-path-draw animation-delay-300": variant === "default",
               },
-              isHovered ? 'opacity-100' : 'opacity-80'
+              isHovered ? "opacity-100" : "opacity-80"
             )}
           />
 
@@ -101,8 +97,8 @@ export const Logo = ({
             r="4"
             fill="url(#logoGradientFill3)"
             className={cn(
-              'origin-center transition-all duration-300',
-              isHovered ? 'opacity-100 scale-110' : 'opacity-90 scale-100'
+              "origin-center transition-all duration-300",
+              isHovered ? "opacity-100 scale-110" : "opacity-90 scale-100"
             )}
           />
           <circle
@@ -111,8 +107,8 @@ export const Logo = ({
             r="2"
             fill="url(#logoGradientFill)"
             className={cn(
-              'origin-center transition-all duration-300',
-              isHovered ? 'opacity-100 scale-110' : 'opacity-80 scale-100'
+              "origin-center transition-all duration-300",
+              isHovered ? "opacity-100 scale-110" : "opacity-80 scale-100"
             )}
           />
           <circle
@@ -121,8 +117,8 @@ export const Logo = ({
             r="2"
             fill="url(#logoGradientFill)"
             className={cn(
-              'origin-center transition-all duration-300',
-              isHovered ? 'opacity-100 scale-110' : 'opacity-80 scale-100'
+              "origin-center transition-all duration-300",
+              isHovered ? "opacity-100 scale-110" : "opacity-80 scale-100"
             )}
           />
           <circle
@@ -131,8 +127,8 @@ export const Logo = ({
             r="2"
             fill="url(#logoGradientFill2)"
             className={cn(
-              'origin-center transition-all duration-300',
-              isHovered ? 'opacity-100 scale-110' : 'opacity-80 scale-100'
+              "origin-center transition-all duration-300",
+              isHovered ? "opacity-100 scale-110" : "opacity-80 scale-100"
             )}
           />
           <circle
@@ -141,48 +137,89 @@ export const Logo = ({
             r="2"
             fill="url(#logoGradientFill2)"
             className={cn(
-              'origin-center transition-all duration-300',
-              isHovered ? 'opacity-100 scale-110' : 'opacity-80 scale-100'
+              "origin-center transition-all duration-300",
+              isHovered ? "opacity-100 scale-110" : "opacity-80 scale-100"
             )}
           />
-          
+
           {/* Gradients - 3 distinct colors: red, blue, black */}
           <defs>
-            <linearGradient id="logoGradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+            <linearGradient
+              id="logoGradient"
+              x1="0"
+              y1="0"
+              x2="40"
+              y2="40"
+              gradientUnits="userSpaceOnUse"
+            >
               <stop stopColor="#1E40AF" />
               <stop offset="1" stopColor="#0A2463" />
             </linearGradient>
-            <linearGradient id="logoGradient2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+            <linearGradient
+              id="logoGradient2"
+              x1="0"
+              y1="0"
+              x2="40"
+              y2="40"
+              gradientUnits="userSpaceOnUse"
+            >
               <stop stopColor="#EA384C" />
               <stop offset="1" stopColor="#C81D35" />
             </linearGradient>
-            <linearGradient id="logoGradientFill" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+            <linearGradient
+              id="logoGradientFill"
+              x1="0"
+              y1="0"
+              x2="40"
+              y2="40"
+              gradientUnits="userSpaceOnUse"
+            >
               <stop stopColor="#1E40AF" />
               <stop offset="1" stopColor="#0A2463" />
             </linearGradient>
-            <linearGradient id="logoGradientFill2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+            <linearGradient
+              id="logoGradientFill2"
+              x1="0"
+              y1="0"
+              x2="40"
+              y2="40"
+              gradientUnits="userSpaceOnUse"
+            >
               <stop stopColor="#EA384C" />
               <stop offset="1" stopColor="#C81D35" />
             </linearGradient>
-            <linearGradient id="logoGradientFill3" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+            <linearGradient
+              id="logoGradientFill3"
+              x1="0"
+              y1="0"
+              x2="40"
+              y2="40"
+              gradientUnits="userSpaceOnUse"
+            >
               <stop stopColor="#000000" />
               <stop offset="1" stopColor="#222222" />
             </linearGradient>
           </defs>
         </svg>
       </div>
-      
+
       {withText && (
-        <span className={cn(
-          'font-display font-semibold tracking-tight transition-all duration-300',
-          textSizeClasses[size],
-          isHovered ? 'text-nexus-blue' : 'text-nexus-darkGray'
-        )}>
+        <span
+          className={cn(
+            "font-display font-semibold tracking-tight transition-all duration-300",
+            textSizeClasses[size],
+            isHovered ? "text-nexus-blue" : "text-nexus-darkGray"
+          )}
+        >
           <span className="text-nexus-blue">Nexus</span>
-          <span className={cn(
-            'transition-all duration-300',
-            isHovered ? 'text-[#EA384C]' : 'text-nexus-black'
-          )}>Nao</span>
+          <span
+            className={cn(
+              "transition-all duration-300",
+              isHovered ? "text-[#EA384C]" : "text-nexus-black"
+            )}
+          >
+            Nao
+          </span>
         </span>
       )}
     </Link>
