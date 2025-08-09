@@ -31,8 +31,8 @@ const FounderCard = ({
   image: string;
   description: string;
 }) => (
-  <div className="bg-white/80 backdrop-blur-lg rounded-2xl shadow-lg border border-gray-200 p-8 transition-all duration-300 hover:shadow-xl hover:translate-y-[-4px] group overflow-hidden relative">
-    <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+  <div className="glass rounded-3xl shadow-modern p-8 transition-all duration-500 hover:shadow-xl hover:translate-y-[-8px] group overflow-hidden relative">
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
     <div className="flex flex-col items-center relative z-10">
       <div className="h-28 w-28 rounded-full bg-gradient-to-r from-[#1E40AF] via-[#EA384C] to-[#000000] p-1 mb-6 shadow-lg transform transition-transform group-hover:scale-105">
         <div className="h-full w-full rounded-full bg-white flex items-center justify-center overflow-hidden">
@@ -58,8 +58,8 @@ const FeatureCard = ({
   title: string;
   description: string;
 }) => (
-  <div className="bg-white/80 backdrop-blur-lg rounded-2xl shadow-lg border border-gray-200 p-8 transition-all duration-300 hover:shadow-xl hover:translate-y-[-4px] group overflow-hidden relative">
-    <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+  <div className="glass rounded-3xl shadow-modern p-8 transition-all duration-500 hover:shadow-xl hover:translate-y-[-8px] group overflow-hidden relative">
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
     <div className="relative z-10">
       <div className="h-16 w-16 rounded-2xl bg-gradient-to-r from-[#1E40AF]/20 to-[#1E40AF]/10 flex items-center justify-center mb-6 transform transition-transform group-hover:scale-110">
         <Icon size={28} className="text-[#1E40AF]" />
@@ -128,8 +128,8 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#F0F4FF] to-[#E6F0FF] bg-fixed">
-      <div className="absolute inset-0 bg-[url('/bg-pattern.svg')] bg-fixed bg-repeat opacity-40 z-0 animate-pulse"></div>
+    <div className="min-h-screen gradient-subtle bg-fixed">
+      <div className="absolute inset-0 bg-[url('/bg-pattern.svg')] bg-fixed bg-repeat opacity-30 z-0"></div>
       <div className="relative z-10">
         <Navbar />
 
@@ -196,7 +196,7 @@ const Index = () => {
 
         {/* Features Section */}
         <section
-          className="py-24 px-6 bg-gradient-to-b from-[#F8FAFC]/80 to-[#EFF6FF]"
+          className="py-24 px-6 bg-gradient-to-b from-background/50 to-secondary/30"
           id="services"
         >
           <div className="max-w-7xl mx-auto">
@@ -267,7 +267,7 @@ const Index = () => {
               Let's discuss how we can help transform your business with our
               digital expertise
             </p>
-            <div className="max-w-2xl mx-auto bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-gray-200 p-10 overflow-hidden relative">
+            <div className="max-w-2xl mx-auto glass rounded-3xl shadow-modern p-10 overflow-hidden relative">
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#1E40AF] via-[#EA384C] to-[#000000]"></div>
               <div className="flex flex-col items-center justify-center text-center mb-10">
                 <div className="h-20 w-20 rounded-full bg-gradient-to-r from-[#1E40AF]/20 to-[#1E40AF]/10 flex items-center justify-center mb-6">

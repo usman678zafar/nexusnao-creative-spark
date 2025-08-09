@@ -39,7 +39,7 @@ export const Navbar = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 px-6 transition-all duration-300",
         scrolled
-          ? "py-3 bg-white/90 backdrop-blur-md shadow-sm"
+          ? "py-3 glass shadow-modern"
           : "py-5 bg-transparent"
       )}
     >
@@ -52,7 +52,7 @@ export const Navbar = () => {
             <a
               key={item.name}
               href={item.href}
-              className="text-nexus-darkGray hover:text-[#1E40AF] font-medium transition-all duration-300"
+              className="text-foreground/80 hover:text-primary font-medium transition-all duration-300"
             >
               {item.name}
             </a>
@@ -75,7 +75,7 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-md animate-slide-up">
+        <div className="md:hidden absolute top-full left-0 right-0 glass shadow-modern animate-slide-up">
           <nav className="flex flex-col p-6 space-y-4">
             {navItems.map((item, i) => (
               <a
