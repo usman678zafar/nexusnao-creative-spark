@@ -34,15 +34,15 @@ const FounderCard = ({
   <div className="gradient-card rounded-3xl shadow-modern-xl p-8 transition-bounce hover-lift group overflow-hidden relative border border-primary/10">
     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
     <div className="flex flex-col items-center relative z-10">
-      <div className="h-28 w-28 rounded-full bg-gradient-to-r from-[#1E40AF] via-[#EA384C] to-[#000000] p-1 mb-6 shadow-lg transform transition-transform group-hover:scale-105">
+      <div className="h-28 w-28 rounded-full gradient-blue p-1 mb-6 shadow-modern-xl transform transition-bounce group-hover:scale-110 group-hover:rotate-6">
         <div className="h-full w-full rounded-full bg-white flex items-center justify-center overflow-hidden">
           <User size={42} className="text-gray-700" />
         </div>
       </div>
-      <h3 className="text-2xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#1E40AF] to-[#000000]">
+      <h3 className="text-2xl font-bold mb-2 text-primary">
         {name}
       </h3>
-      <p className="text-[#EA384C] font-semibold mb-4 tracking-wide">{role}</p>
+      <p className="text-accent font-semibold mb-4 tracking-wide">{role}</p>
       <p className="text-gray-600 text-center leading-relaxed">{description}</p>
     </div>
   </div>
@@ -61,11 +61,11 @@ const FeatureCard = ({
   <div className="gradient-card rounded-3xl shadow-modern-xl p-8 transition-bounce hover-lift group overflow-hidden relative border border-primary/10">
     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
     <div className="relative z-10">
-      <div className="h-16 w-16 rounded-2xl bg-gradient-to-r from-[#1E40AF]/20 to-[#1E40AF]/10 flex items-center justify-center mb-6 transform transition-transform group-hover:scale-110">
-        <Icon size={28} className="text-[#1E40AF]" />
+      <div className="icon-container icon-glow h-16 w-16 rounded-3xl flex items-center justify-center mb-6">
+        <Icon size={32} className="text-primary" />
       </div>
-      <h3 className="text-xl font-bold mb-3 text-gray-800">{title}</h3>
-      <p className="text-gray-600 leading-relaxed">{description}</p>
+      <h3 className="text-xl font-bold mb-3 text-foreground">{title}</h3>
+      <p className="text-muted-foreground leading-relaxed">{description}</p>
     </div>
   </div>
 );
@@ -76,10 +76,10 @@ const ConsultationButton = () => (
     href="https://calendly.com/nexusnao1/30min"
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center justify-center w-full md:w-auto px-8 py-4 gradient-primary text-white font-semibold rounded-2xl hover:opacity-90 transition-modern shadow-modern hover:shadow-modern-xl transform hover:-translate-y-2 text-lg"
+    className="inline-flex items-center justify-center w-full md:w-auto px-8 py-4 gradient-blue text-primary-foreground font-semibold rounded-2xl hover:opacity-90 transition-bounce shadow-modern hover:shadow-modern-xl transform hover:-translate-y-2 hover:scale-105 text-lg"
   >
     Book a Free Consultation
-    <ArrowRight className="ml-3 h-5 w-5 animate-pulse" />
+    <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
   </a>
 );
 
@@ -145,11 +145,11 @@ const Index = () => {
               </div>
               <h1 className="text-5xl md:text-7xl font-display font-bold mb-8 max-w-4xl leading-tight">
                 Software & E-commerce{" "}
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#1E40AF] via-[#EA384C] to-[#000000] animate-gradient">
+                <span className="text-primary">
                   Solutions
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mb-12 leading-relaxed">
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-12 leading-relaxed">
                 Connecting your business to the digital world with seamless
                 software services and e-commerce solutions.
               </p>
