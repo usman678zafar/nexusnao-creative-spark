@@ -203,6 +203,7 @@
   .icon-glow:hover {
     filter: drop-shadow(0 0 20px hsl(215 88% 55% / 0.6));
   }
+}
 
 /* Custom animations */
 .logo-mask {
