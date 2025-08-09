@@ -31,8 +31,8 @@ const FounderCard = ({
   image: string;
   description: string;
 }) => (
-  <div className="glass rounded-3xl shadow-modern p-8 transition-all duration-500 hover:shadow-xl hover:translate-y-[-8px] group overflow-hidden relative">
-    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+  <div className="gradient-card rounded-3xl shadow-modern-xl p-8 transition-bounce hover-lift group overflow-hidden relative border border-primary/10">
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
     <div className="flex flex-col items-center relative z-10">
       <div className="h-28 w-28 rounded-full bg-gradient-to-r from-[#1E40AF] via-[#EA384C] to-[#000000] p-1 mb-6 shadow-lg transform transition-transform group-hover:scale-105">
         <div className="h-full w-full rounded-full bg-white flex items-center justify-center overflow-hidden">
@@ -58,8 +58,8 @@ const FeatureCard = ({
   title: string;
   description: string;
 }) => (
-  <div className="glass rounded-3xl shadow-modern p-8 transition-all duration-500 hover:shadow-xl hover:translate-y-[-8px] group overflow-hidden relative">
-    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+  <div className="gradient-card rounded-3xl shadow-modern-xl p-8 transition-bounce hover-lift group overflow-hidden relative border border-primary/10">
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
     <div className="relative z-10">
       <div className="h-16 w-16 rounded-2xl bg-gradient-to-r from-[#1E40AF]/20 to-[#1E40AF]/10 flex items-center justify-center mb-6 transform transition-transform group-hover:scale-110">
         <Icon size={28} className="text-[#1E40AF]" />
@@ -76,7 +76,7 @@ const ConsultationButton = () => (
     href="https://calendly.com/nexusnao1/30min"
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center justify-center w-full md:w-auto px-8 py-4 bg-gradient-to-r from-[#1E40AF] via-[#EA384C] to-[#000000] text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg"
+    className="inline-flex items-center justify-center w-full md:w-auto px-8 py-4 gradient-primary text-white font-semibold rounded-2xl hover:opacity-90 transition-modern shadow-modern hover:shadow-modern-xl transform hover:-translate-y-2 text-lg"
   >
     Book a Free Consultation
     <ArrowRight className="ml-3 h-5 w-5 animate-pulse" />
@@ -129,7 +129,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen gradient-subtle bg-fixed">
-      <div className="absolute inset-0 bg-[url('/bg-pattern.svg')] bg-fixed bg-repeat opacity-30 z-0"></div>
+      <div className="absolute inset-0 bg-[url('/bg-pattern.svg')] bg-fixed bg-repeat opacity-20 z-0"></div>
       <div className="relative z-10">
         <Navbar />
 
